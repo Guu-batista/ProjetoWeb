@@ -1,0 +1,102 @@
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.header, .cart-container {
+    max-width: 1200px;
+    margin: auto;
+}
+.header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header .location, .header .cart-info {
+    display: flex;
+    align-items: center;
+}
+.header .location {
+    font-size: 14px;
+}
+.header .search-bar {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+.header .search-bar input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+.header .search-bar button {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background-color: #28a745;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.header .cart-info {
+    font-size: 14px;
+}
+.header .cart-info i {
+    margin-right: 5px;
+}
+.cart-container {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.cart-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cart-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-container table th, .cart-container table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.cart-container .total {
+    text-align: right;
+    margin-top: 20px;
+}
+.cart-container .total div {
+    margin-bottom: 10px;
+}
+.cart-container .total button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cart-container .back-to-shop {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #28a745;
+}
+
+.product-cell {
+    display: flex;
+    align-items: center;
+}
+.product-cell .product-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}

@@ -132,10 +132,6 @@ main {
     position: relative;
 }
 
-.category.active, .product.active {
-    border-color: green;
-}
-
 .category img, .product img {
     width: 100%;
     height: auto;

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/carrinho.css">
+    <title>Carrinho</title>
+</head>
+<body>
+    <div class="header">
+        <div class="location">
+            <i class="fa fa-map-marker"></i> Campinas - São Paulo
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Procurar">
+            <button>Buscar</button>
+        </div>
+        <div class="cart-info">
+             <span>🛒 R$ 57,00</span>
+        </div>
+    </div>
+    <div class="cart-container">
+        <h2>Meu Carrinho</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td  class="product-cell">
+                         <img src="Assets/pimenta-verde.png" class="product-image" alt="">Pimenta Verde</td>
+                    <td>R$10,00</td>
+                    <td>
+                        <button>-</button>
+                        <span>5</span>
+                        <button>+</button>
+                    </td>
+                    <td>R$50,00</td>
+                </tr>
+                <tr>
+                    <td class="product-cell">
+                         <img src="Assets/pimentao-verde.png" class="product-image" alt="">Pimentão Verde</td>
+                    <td>R$17,00</td>
+                    <td>
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </td>
+                    <td>R$17,00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <div>Subtotal: R$57,00</div>
+            <div>Frete: Grátis</div>
+            <div>Total: R$57,00</div>
+            <button>Seguir para Pagamento</button>
+        </div>
+        <a href="index.html" class="back-to-shop">Voltar ao Mercado</a>
+    </div>
+</body>
+</html>
