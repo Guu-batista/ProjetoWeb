@@ -1,31 +1,36 @@
-<header class="top-bar">
-    <div class="top-info">
-        <span class="location">Campinas - São Paulo</span>
-        <a href="#" class="login-link">Cadastrar / Entrar</a>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoShop</title>
+<link rel="stylesheet" href="top-bar.html">
+</head>
+<body>
+<div class="top-bar">
+    <div class="top-location">Campinas - São Paulo</div>
+    <div class="logo-container">
+        <img src="Assets/logo.jpg" alt="EcoShop" class="logo"> <!-- Substitua logo.png pelo caminho correto do seu logo -->
     </div>
-    <div class="main-bar">
-        <div class="container">
-            <img src="Assets/logo.jpg" alt="EcoShop">
-            <span class="shop-name">EcoShop</span>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Procurar">
-            <button>Buscar</button>
-        </div>
-        <div class="user-controls">
-            <a href="#" class="top-link"><img src="Assets/coracao.png" alt="Favoritos"></a>
-            <span class="divider">|</span>
-            <a href="#" class="cart">
-                <img src="Assets/sacola-compras.png" alt="Carrinho">
-                <span>R$ 57.00</span>
-            </a>
+    <div class="search-container">
+        <input type="text" placeholder="Procurar">
+        <button>Buscar</button>
+    </div>
+    <div class="user-actions">
+        <a href="#">Cadastrar</a> / <a href="#">Entrar</a>
+        <div class="cart">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-value">R$ 87.00</span>
         </div>
     </div>
-    <nav class="navigation-bar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Mercado</a></li>
-            <li><a href="cart.html">Carrinho</a></li>
-        </ul>
-    </nav>
-</header>
+</div>
+<nav class="navigation-bar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Mercado</a></li>
+        <li><a href="#">Carrinho</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+</nav>
+</body>
+</html>
