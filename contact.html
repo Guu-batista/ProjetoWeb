@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em Contato - EcoShop</title>
+    <link rel="stylesheet" href="Styles/contact.css">
+    <link rel="stylesheet" href="Styles/top-bar.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+</head>
+<body>
+    <div id="top-bar-container"></div>
+    <script src="js/load-top-bar-simplicity.js"></script>
+    <main>
+        <div class="contact-container">
+            <h1>Entre em Contato</h1>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <div id="footer-container"></div>
+    <script src="js/load-footer.js"></script>
+</body>
+</html>

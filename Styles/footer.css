@@ -1,8 +1,23 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 footer {
     background-color: #333;
     color: white;
     padding: 20px 0;
     text-align: center;
+    margin-top: auto;
 }
 
 footer p {
