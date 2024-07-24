@@ -21,6 +21,7 @@ body {
 }
 
 .top-row, .bottom-row {
+    margin-top: 20px;
     margin-bottom: 20px; /* Adiciona espaçamento entre top-row e bottom-row */
 }
 
