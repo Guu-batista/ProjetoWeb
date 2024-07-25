@@ -117,8 +117,6 @@ main {
     background-size: cover;
 }
 
-/* Media Queries for Responsiveness */
-
 @media (max-width: 1200px) {
     .category, .product {
         flex: 1 1 calc(25% - 20px);
