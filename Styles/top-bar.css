@@ -22,7 +22,7 @@ body {
 
 .top-row, .bottom-row {
     margin-top: 20px;
-    margin-bottom: 20px; /* Adiciona espaçamento entre top-row e bottom-row */
+    margin-bottom: 20px;
 }
 
 .location {
@@ -127,7 +127,7 @@ body {
 }
 
 .nav-bar {
-    background-color: #333;
+    background-color: #2a993c;
     padding: 20px 0;
 }
 
