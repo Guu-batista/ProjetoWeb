@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja organica</title>
-    <link rel="stylesheet" href="/Styles/styles.css">
-    <link rel="stylesheet" href="/Styles/top-bar.css">
-    <link rel="stylesheet" href="/Styles/footer.css">
+    <title>Loja Orgânica - EcoShop</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="Styles/top-bar.css">
+    <link rel="stylesheet" href="Styles/footer.css">
 </head>
 <body>
     <div id="top-bar-container"></div>
     <script src="js/load-top-bar.js"></script>
     <main>
+        <section class="apresentacao">
+            <h1>Bem-vindo à EcoShop!</h1>
+            <p>Somos uma cooperativa dedicada a fornecer produtos orgânicos de alta qualidade diretamente para você. Nosso compromisso é com a saúde, sustentabilidade e o apoio aos agricultores locais.</p>
+            <p>Explore nossa variedade de frutas, vegetais, carnes, peixes, bebidas e muito mais. Junte-se a nós em nossa missão de promover um estilo de vida saudável e sustentável.</p>
+        </section>
+        
         <section class="categorias-populares">
             <div class="section-header">
                 <h2>Categorias Populares</h2>
@@ -19,117 +25,40 @@
             </div>
             <div class="categories">
                 <div class="category">
-                    <img src="/Assets/frutas.png" alt="Frutas">
+                    <img src="Assets/frutas.png" alt="Frutas">
                     <span>Frutas</span>
                 </div>
                 <div class="category">
-                    <img src="/Assets/vegetais.png" alt="Vegetais">
+                    <img src="Assets/vegetais.png" alt="Vegetais">
                     <span>Vegetais</span>
                 </div>
                 <div class="category">
-                    <img src="/Assets/carne_peixe.png" alt="Carne e peixes">
-                    <span>Carne e peixes</span>
+                    <img src="Assets/carne_peixe.png" alt="Carne e Peixes">
+                    <span>Carne e Peixes</span>
                 </div>
                 <div class="category">
                     <img src="Assets/bebidas.png" alt="Bebidas">
                     <span>Bebidas</span>
                 </div>
                 <div class="category">
-                    <img src="/Assets/outros.png" alt="Outros">
+                    <img src="Assets/outros.png" alt="Outros">
                     <span>Outros</span>
                 </div>
             </div>
         </section>
+        
         <section class="produtos-populares">
             <div class="section-header">
                 <h2>Produtos Populares</h2>
                 <a href="#">Ver todos →</a>
             </div>
-            <div class="products">
-                <div class="product">
-                    <img src="/Assets/maca_verde.png" alt="Maçã Verde">
-                    <div class="product-info">
-                        <h3>Maçã Verde</h3>
-                        <p>R$14.99</p>
-                        <div class="rating">★★★★★</div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="/Assets/laranja.png" alt="Laranja">
-                    <div class="product-info">
-                        <h3>Laranja</h3>
-                        <p>R$20.00</p>
-                        <div class="rating">★★★★☆</div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="/Assets/nabo.png" alt="Nabo">
-                    <div class="product-info">
-                        <h3>Nabo</h3>
-                        <p>R$12.00</p>
-                        <div class="rating">★★★★☆</div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="/Assets/alface.png" alt="Alface">
-                    <div class="product-info">
-                        <h3>Alface</h3>
-                        <p>R$9.00</p>
-                        <div class="rating">★★★★☆</div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="/Assets/berinjela.png" alt="Berinjela">
-                    <div class="product-info">
-                        <h3>Berinjela</h3>
-                        <p>R$34.00</p>
-                        <div class="rating">★★★★☆</div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="/Assets/batata.png" alt="Batatas">
-                    <div class="product-info">
-                        <h3>Batatas</h3>
-                        <p>R$20.00</p>
-                        <div class="rating">★★★★☆</div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="/Assets/milho.png" alt="Milho">
-                    <div class="product-info">
-                        <h3>Milho</h3>
-                        <p>R$20.00</p>
-                        <div class="rating">★★★★☆</div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="/Assets/couve-flor.png" alt="Couve Flor">
-                    <div class="product-info">
-                        <h3>Couve Flor</h3>
-                        <p>R$12.00</p>
-                        <div class="rating">★★★★☆</div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="/Assets/pimentao-verde.png" alt="Pimentão Verde">
-                    <div class="product-info">
-                        <h3>Pimentão Verde</h3>
-                        <p>R$9.00</p>
-                        <div class="rating">★★★★☆</div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="/Assets/pimenta-verde.png" alt="Pimenta Verde">
-                    <div class="product-info">
-                        <h3>Pimenta Verde</h3>
-                        <p>R$34.00</p>
-                        <div class="rating">★★★★☆</div>
-                    </div>
-                </div>
+            <div class="products" id="products-container">
+                <!-- Produtos serão carregados dinamicamente aqui -->
             </div>
         </section>
     </main>
     <div id="footer-container"></div>
     <script src="js/load-footer.js"></script>
+    <script src="js/load-products.js"></script>
 </body>
 </html>

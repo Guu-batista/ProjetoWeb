@@ -3,15 +3,24 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
 main {
     padding: 20px;
+}
+
+.apresentacao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.apresentacao h1 {
+    font-size: 32px;
+    color: #2a993c;
+}
+
+.apresentacao p {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0;
 }
 
 .section-header {
@@ -22,7 +31,7 @@ main {
 }
 
 .section-header h2 {
-    margin: 0;
+    margin: 10px;
 }
 
 .section-header a {
