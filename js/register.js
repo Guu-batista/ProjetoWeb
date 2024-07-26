@@ -11,10 +11,10 @@ document.getElementById('register-form').addEventListener('submit', function(eve
         return;
     }
 
-    localStorage.setItem('name', name);
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', password);
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    users.push({ name, email, password });
+    localStorage.setItem('users', JSON.stringify(users));
 
     alert('Cadastro realizado com sucesso!');
-    window.location.href = 'register.html';
+    window.location.href = 'login.html';
 });

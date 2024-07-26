@@ -13,26 +13,30 @@
     <script src="js/load-top-bar-simplicity.js"></script>
     <main>
         <div class="register-container">
-            <h1>Criar Conta</h1>
+            <h1>Cadastro</h1>
             <form id="register-form">
                 <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Nome" required>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" name="password" placeholder="Senha" required>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme a senha" required>
+                    <label for="confirm-password">Confirmar Senha:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
                 <button type="submit">Cadastrar</button>
             </form>
-            <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
         </div>
     </main>
     <div id="footer-container"></div>
     <script src="js/load-footer.js"></script>
+    <script src="js/register.js"></script>
 </body>
 </html>

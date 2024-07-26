@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const checkoutButton = document.getElementById('checkout-button');
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Função para exibir os itens do carrinho
     function displayCartItems() {
         cartItems.innerHTML = '';
         let total = 0;
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         totalPrice.textContent = `Total: R$${total.toFixed(2)}`;
 
-        // Adicionar evento de clique para os botões de remover do carrinho
         document.querySelectorAll('.remove-from-cart').forEach(button => {
             button.addEventListener('click', function() {
                 const index = this.getAttribute('data-index');
@@ -35,16 +33,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Função para remover item do carrinho
     function removeFromCart(index) {
         cart.splice(index, 1);
         localStorage.setItem('cart', JSON.stringify(cart));
         displayCartItems();
     }
 
-    // Evento para finalizar a compra
     checkoutButton.addEventListener('click', function() {
         if (cart.length > 0) {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            orders.push(cart);
+            localStorage.setItem('orders', JSON.stringify(orders));
             alert('Compra finalizada com sucesso!');
             localStorage.removeItem('cart');
             displayCartItems();
@@ -53,6 +52,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Inicialização
     displayCartItems();
 });
