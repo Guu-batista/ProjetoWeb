@@ -2,4 +2,5 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     event.preventDefault();
     // Aqui você pode adicionar a lógica para enviar os dados do formulário
     alert('Formulário enviado com sucesso!');
+    document.getElementById('contact-form').reset()
 });

@@ -3,28 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciar - EcoShop</title>
+    <title>Painel do Administrador - EcoShop</title>
     <link rel="stylesheet" href="Styles/admin.css">
     <link rel="stylesheet" href="Styles/top-bar.css">
-    <link rel="stylesheet" href="Styles/footer.css"> 
+    <link rel="stylesheet" href="Styles/footer.css">
 </head>
 <body>
     <div id="top-bar-container"></div>
     <script src="js/load-top-bar-simplicity.js"></script>
-    <script src="js/admin.js"></script>
     <main>
-        <div class="container">
-            <h2>Gerenciar Frutas</h2>
-            <form id="fruitForm">
-                <label for="fruit">Fruta:</label>
-                <input type="text" id="fruit" name="fruit" required>
-                <button type="button" onclick="addFruit()">Adicionar</button>
-                <button type="button" onclick="removeFruit()">Remover</button>
+        <div class="admin-container">
+            <h1>Painel do Administrador</h1>
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="product-name">Nome do Produto:</label>
+                    <input type="text" id="product-name" name="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Preço:</label>
+                    <input type="number" id="product-price" name="product-price" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-category">Categoria:</label>
+                    <input type="text" id="product-category" name="product-category" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-image">URL da Imagem:</label>
+                    <input type="url" id="product-image" name="product-image" required>
+                </div>
+                <button type="submit">Cadastrar Produto</button>
             </form>
-            <ul id="fruitList"></ul>
+            <div id="product-list"></div>
         </div>
     </main>
+    <div id="footer-container"></div>
+    <script src="js/load-footer.js"></script>
+    <script src="js/admin.js"></script>
 </body>
-<div id="footer-container"></div>
-<script src="js/load-footer.js"></script>
 </html>
