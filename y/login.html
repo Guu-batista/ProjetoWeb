@@ -10,8 +10,13 @@
 </head>
 <body>
     <div id="top-bar-container"></div>
-    <script src="js/load-top-bar-simplicity.js"></script>
-    <script src="js/login.js"></script>
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script defer src="js/env.js"></script>
+    <script defer src="js/login.js"></script>
+    
     <main>
         <div class="login-container">
             <h1>Login</h1>
@@ -29,8 +34,7 @@
             <p>Não tem uma conta? <a href="register.html">Cadastre-se</a></p>
         </div>
     </main>
+    <div id="footer-container"></div>
+    <script src="js/load-footer.js"></script>
 </body>
-<div id="footer-container"></div>
-<script src="js/load-footer.js"></script>
-<script src="js/login.js"></script>
 </html>

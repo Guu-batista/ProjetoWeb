@@ -1,26 +1,45 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.getElementById('login-form');
-    
-    loginForm.addEventListener('submit', function(event) {
+
+    loginForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        if (email === 'admin@admin.com' && password === 'admin') {
-            alert('Login de administrador realizado com sucesso!');
-            window.location.href = 'admin.html'; 
-            return;
-        }
+        // Autentica com Firebase
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
 
-        const users = JSON.parse(localStorage.getItem('users')) || [];
-        const user = users.find(user => user.email === email && user.password === password);
-
-        if (user) {
-            alert('Login realizado com sucesso!');
-            window.location.href = 'index.html'; 
-        } else {
-            alert('Email ou senha incorretos.');
-        }
+                // Verifica se o usuário é um administrador
+                if (email === 'admin@admin.com' && password === 'admin1234') {
+                    // Redireciona para a página de administração
+                    alert('Login de administrador realizado com sucesso!');
+                    window.location.href = 'admin.html';
+                } else {
+                    // Verifica se o usuário existe no Firestore
+                    const db = firebase.firestore();
+                    db.collection("Pessoas").where("email", "==", email).get()
+                        .then((querySnapshot) => {
+                            if (!querySnapshot.empty) {
+                                // Usuário encontrado no Firestore
+                                alert('Login realizado com sucesso!');
+                                window.location.href = 'index.html'; // Redireciona para a página principal
+                            } else {
+                                // Usuário não encontrado no Firestore
+                                alert('Usuário não encontrado no Firestore.');
+                            }
+                        })
+                        .catch((error) => {
+                            console.error('Erro ao verificar o usuário no Firestore:', error);
+                            alert('Erro ao verificar o usuário. Tente novamente.');
+                        });
+                }
+            })
+            .catch((error) => {
+                console.error('Erro ao fazer login:', error);
+                alert('Email ou senha incorretos.');
+            });
     });
 });

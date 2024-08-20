@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,17 @@
     <link rel="stylesheet" href="Styles/top-bar.css">
     <link rel="stylesheet" href="Styles/footer.css">
 </head>
+
 <body>
     <div id="top-bar-container"></div>
     <script src="js/load-top-bar-simplicity.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script defer src="js/env.js"></script>
+    <script defer src="js/register.js"></script>
+
+
     <main>
         <div class="register-container">
             <h1>Cadastro</h1>
@@ -37,6 +46,6 @@
     </main>
     <div id="footer-container"></div>
     <script src="js/load-footer.js"></script>
-    <script src="js/register.js"></script>
 </body>
+
 </html>
