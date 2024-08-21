@@ -1,5 +1,5 @@
 var firebaseConfig = {
-    apiKey: "API_KEY",
+    apiKey: "AIzaSyBVqVkFtiPj_bPDurHlMKYm3T6VjwHDW_s",
     authDomain: "ecoshop-web.firebaseapp.com",
     projectId: "ecoshop-web",
     storageBucket: "ecoshop-web.appspot.com",
