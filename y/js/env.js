@@ -9,6 +9,7 @@ var firebaseConfig = {
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
 } else {
     firebase.app();
 }
